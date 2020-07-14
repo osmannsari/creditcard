@@ -72,7 +72,7 @@
                         </label>
                         <div class="card-item__content">
                             <label for="cardName" class="card-item__info" ref="cardName">
-                                <div class="card-item__holder">Card Holder</div>
+                                <div class="card-item__holder">Kart Sahibi</div>
                                 <transition name="slide-fade-up">
                                     <div class="card-item__name" v-if="cardName.length" key="1">
                                         <transition-group name="slide-fade-right">
@@ -81,15 +81,16 @@
                                                       v-if="$index === $index" v-bind:key="$index + 1">{{n}}</span>
                                         </transition-group>
                                     </div>
-                                    <div class="card-item__name" v-else key="2">Full Name</div>
+                                    <div class="card-item__name" v-else key="2">Ad Soyad</div>
                                 </transition>
                             </label>
                             <div class="card-item__date" ref="cardDate">
-                                <label for="cardMonth" class="card-item__dateTitle">Expires</label>
-                                <label for="cardMonth" class="card-item__dateItem">
-                                    <transition name="slide-fade-up">
+                                <label for="cardMonth" class="card-item__dateTitle" >Son Kullanma Tarihi</label>
+
+                                <label for="cardMonth" class="card-item__dateItem2" id="cardItemfordate" >
+                                    <transition name="slide-fade-up" id="cardMonth">
                                         <span v-if="cardMonth" v-bind:key="cardMonth">{{cardMonth}}</span>
-                                        <span v-else key="2">MM</span>
+                                        <span v-else key="2" >AA</span>
                                     </transition>
                                 </label>
                                 /
@@ -100,7 +101,8 @@
                                         <span v-else key="2">YY</span>
                                     </transition>
                                 </label>
-                            </div>
+                                </div>
+
                         </div>
                     </div>
                 </div>
@@ -130,23 +132,23 @@
         </div>
         <div class="card-form__inner">
             <div class="card-input">
-                <label for="cardNumber" class="card-input__label">Card Number</label>
+                <label for="cardNumber" class="card-input__label">Kart Numarası</label>
                 <input type="text" id="cardNumber" class="card-input__input" v-mask="generateCardNumberMask"
                        v-model="cardNumber" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardNumber"
                        autocomplete="off">
             </div>
             <div class="card-input">
-                <label for="cardName" class="card-input__label">Card Holders</label>
+                <label for="cardName" class="card-input__label">Kart Sahibi</label>
                 <input type="text" id="cardName" class="card-input__input" v-model="cardName"
                        v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardName" autocomplete="off">
             </div>
             <div class="card-form__row">
                 <div class="card-form__col">
                     <div class="card-form__group">
-                        <label for="cardMonth" class="card-input__label">Expiration Date</label>
+                        <label for="cardMonth" class="card-input__label">Son Kullanma Tarihi</label>
                         <select class="card-input__input -select" id="cardMonth" v-model="cardMonth"
                                 v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate">
-                            <option value="" disabled selected>Month</option>
+                            <option value="" disabled selected>Ay</option>
                             <option v-bind:value="n < 10 ? '0' + n : n" v-for="n in 12"
                                     v-bind:disabled="n < minCardMonth" v-bind:key="n">
                                 {{n < 10 ? '0' + n : n}}
@@ -154,7 +156,7 @@
                         </select>
                         <select class="card-input__input -select" id="cardYear" v-model="cardYear"
                                 v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate">
-                            <option value="" disabled selected>Year</option>
+                            <option value="" disabled selected>Yıl</option>
                             <option v-bind:value="$index + minCardYear" v-for="(n, $index) in 12" v-bind:key="n">
                                 {{$index + minCardYear}}
                             </option>
@@ -164,7 +166,7 @@
                 <div class="card-form__col -cvv">
                     <div class="card-input">
                         <label for="cardCvv" class="card-input__label">CVV</label>
-                        <input type="text" class="card-input__input" id="cardCvv" v-mask="'####'" maxlength="4"
+                        <input type="text" class="card-input__input" id="cardCvv" v-mask="'####'" maxlength="3"
                                v-model="cardCvv" v-on:focus="flipCard(true)" v-on:blur="flipCard(false)"
                                autocomplete="off">
                     </div>
@@ -172,7 +174,7 @@
             </div>
 
             <button v-on:click="send" class="card-form__button">
-                Submit
+                Gönder
             </button>
         </div>
     </div>

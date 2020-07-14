@@ -2088,6 +2088,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CardComponent",
   data: function data() {
@@ -38501,7 +38503,7 @@ var render = function() {
                   },
                   [
                     _c("div", { staticClass: "card-item__holder" }, [
-                      _vm._v("Card Holder")
+                      _vm._v("Kart Sahibi")
                     ]),
                     _vm._v(" "),
                     _c("transition", { attrs: { name: "slide-fade-up" } }, [
@@ -38536,7 +38538,7 @@ var render = function() {
                         : _c(
                             "div",
                             { key: "2", staticClass: "card-item__name" },
-                            [_vm._v("Full Name")]
+                            [_vm._v("Ad Soyad")]
                           )
                     ])
                   ],
@@ -38550,23 +38552,27 @@ var render = function() {
                       staticClass: "card-item__dateTitle",
                       attrs: { for: "cardMonth" }
                     },
-                    [_vm._v("Expires")]
+                    [_vm._v("Son Kullanma Tarihi")]
                   ),
                   _vm._v(" "),
                   _c(
                     "label",
                     {
-                      staticClass: "card-item__dateItem",
-                      attrs: { for: "cardMonth" }
+                      staticClass: "card-item__dateItem2",
+                      attrs: { for: "cardMonth", id: "cardItemfordate" }
                     },
                     [
-                      _c("transition", { attrs: { name: "slide-fade-up" } }, [
-                        _vm.cardMonth
-                          ? _c("span", { key: _vm.cardMonth }, [
-                              _vm._v(_vm._s(_vm.cardMonth))
-                            ])
-                          : _c("span", { key: "2" }, [_vm._v("MM")])
-                      ])
+                      _c(
+                        "transition",
+                        { attrs: { name: "slide-fade-up", id: "cardMonth" } },
+                        [
+                          _vm.cardMonth
+                            ? _c("span", { key: _vm.cardMonth }, [
+                                _vm._v(_vm._s(_vm.cardMonth))
+                              ])
+                            : _c("span", { key: "2" }, [_vm._v("AA")])
+                        ]
+                      )
                     ],
                     1
                   ),
@@ -38650,7 +38656,7 @@ var render = function() {
         _c(
           "label",
           { staticClass: "card-input__label", attrs: { for: "cardNumber" } },
-          [_vm._v("Card Number")]
+          [_vm._v("Kart Numarası")]
         ),
         _vm._v(" "),
         _c("input", {
@@ -38693,7 +38699,7 @@ var render = function() {
         _c(
           "label",
           { staticClass: "card-input__label", attrs: { for: "cardName" } },
-          [_vm._v("Card Holders")]
+          [_vm._v("Kart Sahibi")]
         ),
         _vm._v(" "),
         _c("input", {
@@ -38732,7 +38738,7 @@ var render = function() {
             _c(
               "label",
               { staticClass: "card-input__label", attrs: { for: "cardMonth" } },
-              [_vm._v("Expiration Date")]
+              [_vm._v("Son Kullanma Tarihi")]
             ),
             _vm._v(" "),
             _c(
@@ -38770,7 +38776,7 @@ var render = function() {
                 _c(
                   "option",
                   { attrs: { value: "", disabled: "", selected: "" } },
-                  [_vm._v("Month")]
+                  [_vm._v("Ay")]
                 ),
                 _vm._v(" "),
                 _vm._l(12, function(n) {
@@ -38829,7 +38835,7 @@ var render = function() {
                 _c(
                   "option",
                   { attrs: { value: "", disabled: "", selected: "" } },
-                  [_vm._v("Year")]
+                  [_vm._v("Yıl")]
                 ),
                 _vm._v(" "),
                 _vm._l(12, function(n, $index) {
@@ -38878,7 +38884,7 @@ var render = function() {
               attrs: {
                 type: "text",
                 id: "cardCvv",
-                maxlength: "4",
+                maxlength: "3",
                 autocomplete: "off"
               },
               domProps: { value: _vm.cardCvv },
@@ -38904,7 +38910,7 @@ var render = function() {
       _c(
         "button",
         { staticClass: "card-form__button", on: { click: _vm.send } },
-        [_vm._v("\n            Submit\n        ")]
+        [_vm._v("\n            Gönder\n        ")]
       )
     ])
   ])
@@ -51370,8 +51376,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\php\www\vueCredit\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\php\www\vueCredit\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Omer\Documents\GitHub\creditcard\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Omer\Documents\GitHub\creditcard\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

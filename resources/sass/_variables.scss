@@ -137,6 +137,23 @@ body {
     @media screen and (max-width: 360px) {
         height: 180px;
     }
+.card-item_dateTitle2{
+
+    padding:0px;
+}label{
+    display: inline-block;
+    margin-bottom: -0.1rem !important;
+}
+#cardItemfordate{
+    // margin-bottom: 80px;
+}
+.card-item__content{
+    margin-top: 30px;
+    padding-right: 70px;
+    padding-bottom: 10px;
+
+}
+
 
     &.-active {
         .card-item__side {
@@ -432,8 +449,9 @@ body {
     &__dateTitle {
         opacity: 0.7;
         font-size: 13px;
-        padding-bottom: 6px;
+        padding-bottom: 0px;
         width: 100%;
+
 
         @media screen and (max-width: 480px) {
             font-size: 12px;

@@ -164,6 +164,21 @@ body {
   }
 }
 
+.card-item .card-item_dateTitle2 {
+  padding: 0px;
+}
+
+.card-item label {
+  display: inline-block;
+  margin-bottom: -0.1rem !important;
+}
+
+.card-item .card-item__content {
+  margin-top: 30px;
+  padding-right: 70px;
+  padding-bottom: 10px;
+}
+
 .card-item.-active .card-item__side.-front {
   transform: perspective(1000px) rotateY(180deg) rotateX(0deg) rotateZ(0deg);
 }
@@ -495,7 +510,7 @@ body {
 .card-item__dateTitle {
   opacity: 0.7;
   font-size: 13px;
-  padding-bottom: 6px;
+  padding-bottom: 0px;
   width: 100%;
 }
 
